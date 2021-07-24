@@ -42,10 +42,11 @@ const initialState = {
 
      //Load More
      useEffect(()=>{
-        if (!isLoadingMore) return;
-        fetchMovies(state.page+1, searchTerm);
-        setIsLoadingMore(false);
-     }, [isLoadingMore, searchTerm, state.page])
+         if(!isLoadingMore) return;
 
-     return {state, loading, error, searchTerm, setSearchTerm, setIsLoadingMore};
+         fetchMovies(state.page + 1, searchTerm);
+         setIsLoadingMore(false);
+     }, [isLoadingMore, searchTerm, state.page]);
+
+     return{state, loading, error, searchTerm, setSearchTerm, setIsLoadingMore};
  };

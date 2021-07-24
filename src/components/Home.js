@@ -50,7 +50,7 @@ const Home=()=>{
             <Button text='Load More' callback={()=>setIsLoadingMore(true)}/>
         )}
         </>
-    )
+    );
 };
 
 export default Home;
