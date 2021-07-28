@@ -27,6 +27,10 @@ Now run the following commands:
 ## Step 3
 
 In the same directory create a file `.env` and write `REACT_APP_API_KEY='<Your themoviedb API key>'` in it.
+
+## Step 4
+ 
+Replace the public and src folders with the ones in the repository.
   
 In the project directory, you can run:
 
