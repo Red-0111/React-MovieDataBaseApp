@@ -2,7 +2,7 @@ import {
   SEARCH_BASE_URL,
   POPULAR_BASE_URL,
   API_URL,
-  
+  API_KEY,
   REQUEST_TOKEN_URL,
   LOGIN_URL,
   SESSION_ID_URL
@@ -23,11 +23,11 @@ const apiSettings = {
     return await (await fetch(endpoint)).json();
   },
   fetchMovie: async movieId => {
-    const endpoint = `${API_URL}movie/${movieId}?api_key=4150a87d7bad007a25358f624a902cd8`;
+    const endpoint = `${API_URL}movie/${movieId}?api_key=${API_KEY}`;
     return await (await fetch(endpoint)).json();
   },
   fetchCredits: async movieId => {
-    const creditsEndpoint = `${API_URL}movie/${movieId}/credits?api_key=4150a87d7bad007a25358f624a902cd8`;
+    const creditsEndpoint = `${API_URL}movie/${movieId}/credits?api_key=${API_KEY}`;
     return await (await fetch(creditsEndpoint)).json();
   },
   // Bonus material below for login
@@ -60,7 +60,7 @@ const apiSettings = {
     }
   },
   rateMovie: async (sessionId, movieId, value) => {
-    const endpoint = `${API_URL}movie/${movieId}/rating?api_key=4150a87d7bad007a25358f624a902cd8&session_id=${sessionId}`;
+    const endpoint = `${API_URL}movie/${movieId}/rating?api_key=${API_KEY}&session_id=${sessionId}`;
 
     const rating = await (
       await fetch(endpoint, {

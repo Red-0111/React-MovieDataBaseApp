@@ -19,6 +19,7 @@ const Movie=()=>{
     const {state: movie, loading, error} = useMovieFetch(movieId);
     if (loading) return <Spinner/>;
     if (error) return <div>Something went wrong...</div>;
+   
     return(
         <>
             <BreadCrumb movieTitle={movie.original_title}/>
