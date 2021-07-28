@@ -2,8 +2,32 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Demo
 
+https://redreactmoviedb.netlify.app/
+
+## Step 1
+
+### `npx create-react-app <app-name>`
+
+Bootstraps the application
+
+## Step 2
+
+cd <app-name>
+  
+Now run the following commands:
+  
+### `npm i history react-router-dom@next`
+  
+### `npm i styled-components`
+  
+### `npm i prop-types`
+  
+## Step 3
+
+In the same directory create a file `.env` and write `REACT_APP_API_KEY='<Your themoviedb API key>'` in it.
+  
 In the project directory, you can run:
 
 ### `npm start`
